@@ -5,13 +5,13 @@ public struct FunctionFormView: View {
     @Binding var complexNums: [ComplexNum]
     @State var inputReal = 1
     @State var inputImaginary = 1
-    
+
     public init(complexNums: Binding<[ComplexNum]>, inputReal: Int = 1, inputImaginary: Int = 1) {
         self._complexNums = complexNums
         self.inputReal = inputReal
         self.inputImaginary = inputImaginary
     }
-    
+
     public var body: some View {
         HStack {
             TextField(
