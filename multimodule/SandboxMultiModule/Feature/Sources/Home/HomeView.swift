@@ -1,20 +1,24 @@
-//
-//  SwiftUIView.swift
-//  
-//
-//  Created by SCI02122 on 2023/05/22.
-//
-
+import FunctionForm
+import Graph
+import Models
 import SwiftUI
 
-struct SwiftUIView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+public struct HomeView: View {
+    @State private var complexNums: [ComplexNum] = []
+    
+    public init() {}
+    
+    public var body: some View {
+        VStack {
+            FunctionFormView(complexNums: $complexNums)
+            Spacer()
+            GraphView(complexNums: complexNums)
+        }
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        HomeView()
     }
 }
