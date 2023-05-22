@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Graph">
-   </FileRef>
-   <FileRef
-      location = "group:Root">
+      location = "group:Feature">
    </FileRef>
    <FileRef
       location = "group:SandboxMultiModule.xcodeproj">
