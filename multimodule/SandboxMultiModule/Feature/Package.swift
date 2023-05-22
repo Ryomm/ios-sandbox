@@ -7,24 +7,12 @@ let package = Package(
     name: "AppFeature",
     platforms: [.iOS(.v16)],
     products: [
-        .library(
-            name: "AppFeature",
-            targets: ["Feature"]
-        ),
         .library(name: "Home", targets: ["Home"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
     ],
     targets: [
-        .target(
-            name: "Feature",
-            dependencies: []
-        ),
-        .testTarget(
-            name: "FeatureTests",
-            dependencies: ["Feature"]
-        ),
         .target(
             name: "Home",
             dependencies: [
