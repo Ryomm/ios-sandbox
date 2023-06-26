@@ -3,4 +3,10 @@
 iosの練習用リポジトリ
 
 ## multimodule
-マルチモジュールのサンプル
+SPMを使ったマルチモジュール構成のsandbox
+
+## SampltTCA
+TCAを使ったアプリのsandbox
+
+## vision
+visionOSのsandbox
