@@ -2,16 +2,15 @@
 //  ConcurrencySampleAppApp.swift
 //  ConcurrencySampleApp
 //
-//  Created by SCI02122 on 2023/07/13.
-//
 
 import SwiftUI
 
 @main
 struct ConcurrencySampleAppApp: App {
+    @State private var programs = Program.sampleData
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(programs: $programs)
         }
     }
 }

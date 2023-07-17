@@ -1,126 +1,98 @@
 //
 //  ContentView.swift
 //  ConcurrencySampleApp
-//
-//  Created by SCI02122 on 2023/07/13.
-//
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isShowSheet = false
+    @Binding var programs: [Program]
     
     var body: some View {
-        let programs = NowOnAir(
-            nowonair_list: NowOnAir.NowOnAirList(
-                g1: NowOnAir.G1(
-                    previous: NowOnAir.Program(
-                        id: "2023071321477",
-                        start_time: "2023-07-13T04:10:00+09:00",
-                        end_time: "2023-07-13T04:20:00+09:00",
-                        title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～"
-                    ),
-                    present: NowOnAir.Program(
-                        id: "2023071321477",
-                        start_time: "2023-07-13T04:10:00+09:00",
-                        end_time: "2023-07-13T04:20:00+09:00",
-                        title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～"
-                    ),
-                    following: NowOnAir.Program(
-                        id: "2023071321477",
-                        start_time: "2023-07-13T04:10:00+09:00",
-                        end_time: "2023-07-13T04:20:00+09:00",
-                        title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～"
-                    )
-                )
-            )
-        )
-        
-        let program = programs.nowonair_list.g1.present
-        
-        VStack {
-            VStack {
-                Text(program.title)
-                    .font(.title2)
-                HStack {
-                    Text(program.start_time)
-                    Text("〜")
-                    Text(program.end_time)
+        NavigationStack {
+            List($programs) { $program in
+                NavigationLink(destination: ProgramDetailView(program: program)){
+                    ProgramCardView(program: program)
                 }
-                .foregroundColor(.secondary)
             }
-            .padding()
-            .background(.background)
-            .cornerRadius(4)
-            .shadow(color: .gray.opacity(0.7), radius: 4)
-            .sheet(isPresented: $isShowSheet) {
-                ProgramDetailView()
+            .navigationTitle("放送中の番組")
+            
+        }
+    }
+}
+
+struct ProgramCardView: View {
+    let program: Program
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(program.title)
+                .font(.title2)
+            HStack {
+                Text(program.start_time)
+                Text("〜")
+                Text(program.end_time)
             }
-        }.padding()
+            .font(.caption)
+            .foregroundColor(.secondary)
+            .accessibilityElement(children: .combine)
+        }
+        .padding()
     }
 }
 
 struct ProgramDetailView: View {
-    let programDetail = ProgramDetail(
-        g1: [
-            ProgramDetail.G1(
-                id: "2023071321477",
-                start_time: "2023-07-13T04:10:00+09:00",
-                end_time: "2023-07-13T04:20:00+09:00",
-                title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～",
-                subtitle: "アメリカの連邦最高裁による歴史的判断が波紋を広げている。人種の多様性確保を目的に、大学志願者の選考で少数派を優遇してきた措置が違憲に。今何が起きているのか解説。",
-                content: "【解説】髙橋祐介",
-                act: "【解説】髙橋祐介",
-                program_url: "//nhk.jp/P1088",
-                hashtags: [
-                    "#時論公論"
-                ]
-            )
-        ]
-    )
-    
-    let detail = programDetail.g1[0]
+    let program: Program
+    let programDetail: ProgramDetail = ProgramDetail.sampleData
     
     var body: some View {
         VStack {
-            Text(detail.title)
+            Text(programDetail.title)
+                .font(.title)
+            List {
+                Section(header: Text("放送時間")) {
+                    HStack{
+                        Label("開始", systemImage: "timer")
+                        Spacer()
+                        Text(programDetail.start_time)
+                            .foregroundColor(.secondary)
+                            .font(.caption)
+                    }
+                    HStack{
+                        Label("終了", systemImage: "timer")
+                        Spacer()
+                        Text(programDetail.end_time)
+                            .foregroundColor(.secondary)
+                            .font(.caption)
+                    }
+                }
+                
+                Section(header: Text("放送内容")) {
+                    Text(programDetail.subtitle)
+                    Label(programDetail.content, systemImage: "note")
+                    Label(programDetail.act, systemImage: "person")
+                    Label("https:\(programDetail.program_url)", systemImage: "link")
+                    HStack {
+                        ForEach(programDetail.hashtags, id: \.self) { hashtag in
+                            Text(hashtag)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    var programs = NowOnAir(
-        nowonair_list: NowOnAir.NowOnAirList(
-            g1: NowOnAir.G1(
-                previous: NowOnAir.Program(
-                    id: "2023071321477",
-                    start_time: "2023-07-13T04:10:00+09:00",
-                    end_time: "2023-07-13T04:20:00+09:00",
-                    title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～"
-                ),
-                present: NowOnAir.Program(
-                    id: "2023071321477",
-                    start_time: "2023-07-13T04:10:00+09:00",
-                    end_time: "2023-07-13T04:20:00+09:00",
-                    title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～"
-                ),
-                following: NowOnAir.Program(
-                    id: "2023071321477",
-                    start_time: "2023-07-13T04:10:00+09:00",
-                    end_time: "2023-07-13T04:20:00+09:00",
-                    title: "時論公論　人種の多様性に揺れるアメリカ～違憲判決の波紋～"
-                )
-            )
-        )
-    )
-    
     static var previews: some View {
-        ContentView()
+        ContentView(programs: .constant(Program.sampleData))
     }
 }
 
 struct ProgramDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgramDetailView()
+        NavigationStack {
+            ProgramDetailView(program: Program.sampleData[0])
+        }
     }
 }
