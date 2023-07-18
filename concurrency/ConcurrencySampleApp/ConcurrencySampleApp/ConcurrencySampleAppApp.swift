@@ -7,10 +7,18 @@ import SwiftUI
 
 @main
 struct ConcurrencySampleAppApp: App {
-    @State private var programs = Program.sampleData
+    @StateObject private var store = ProgramStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(programs: $programs)
+            ContentView(programs: $store.programs)
+                .task {
+                    do {
+                        try await store.loadPrograms()
+                    } catch {
+                        print("try again")
+                    }
+                }
         }
     }
 }

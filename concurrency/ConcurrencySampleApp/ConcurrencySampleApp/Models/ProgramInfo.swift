@@ -5,6 +5,14 @@
 
 import Foundation
 
+struct ProgramInfo: Decodable {
+    var list: G1
+    
+    struct G1: Decodable {
+        var g1: [ProgramDetail]
+    }
+}
+
 struct ProgramDetail: Decodable {
     var id: String
     var start_time: String
@@ -15,6 +23,18 @@ struct ProgramDetail: Decodable {
     var act: String
     var program_url: String
     var hashtags: [String]
+    
+    init(id: String, start_time: String = "", end_time: String = "", title: String = "", subtitle: String = "", content: String = "", act: String = "", program_url: String = "", hashtags: [String] = []) {
+        self.id = id
+        self.start_time = start_time
+        self.end_time = end_time
+        self.title = title
+        self.subtitle = subtitle
+        self.content = content
+        self.act = act
+        self.program_url = program_url
+        self.hashtags = hashtags
+    }
 }
 
 extension ProgramDetail {
