@@ -10,7 +10,7 @@ class ProgramStore: ObservableObject {
     @Published var programs: [Program] = []
     
     func requestPrograms() async throws -> [Program] {
-        let key = "YOURKEY"
+        let key = "phkMGeEfZk5BBJFyAwGSsRJytzasiaz7"
         let url = URL(string: "https://api.nhk.or.jp/v2/pg/now/130/g1.json?key=\(key)")!
         let (data, _) = try await URLSession.shared.data(from: url, delegate: nil)
         
@@ -37,14 +37,13 @@ class ProgramStore: ObservableObject {
             }
         }
     }
-
 }
 
 class ProgramDetailStore: ObservableObject {
-    @Published var programDetail: ProgramDetail = ProgramDetail(id: "")
+    @Published var programDetail: ProgramDetail = .init(id: "")
     
     func requestProgramDetail(of id: String) async throws -> ProgramDetail {
-        let key = "YOURKEY"
+        let key = "phkMGeEfZk5BBJFyAwGSsRJytzasiaz7"
         let url = URL(string: "https://api.nhk.or.jp/v2/pg/info/130/g1/\(id).json?key=\(key)")!
         let (data, _) = try await URLSession.shared.data(from: url, delegate: nil)
         
