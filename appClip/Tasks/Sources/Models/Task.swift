@@ -5,12 +5,12 @@
 
 import Foundation
 
-struct Task: Identifiable, Codable {
-    let id: UUID
-    var title: String
-    var isDone: Bool
+public struct Task: Identifiable, Codable {
+    public let id: UUID
+    public var title: String
+    public var isDone: Bool
     
-    init(id: UUID = UUID(), title: String, isDone: Bool = false) {
+    public init(id: UUID = UUID(), title: String, isDone: Bool = false) {
         self.id = id
         self.title = title
         self.isDone = isDone
@@ -18,13 +18,13 @@ struct Task: Identifiable, Codable {
 }
 
 extension Task {
-    static var emptyTask: Task {
+    public static var emptyTask: Task {
         Task(title: "")
     }
 }
 
 extension Task {
-    static let sampleData: [Task] = [
+    public static let sampleData: [Task] = [
         Task(title: "Hoge"),
         Task(title: "Fuga", isDone: true),
         Task(title: "Nuga")

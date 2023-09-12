@@ -4,6 +4,8 @@
 //
 
 import SwiftUI
+import Tasks
+import Models
 
 @main
 struct AppClipSampleAppApp: App {

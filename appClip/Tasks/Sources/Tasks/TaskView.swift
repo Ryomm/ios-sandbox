@@ -5,13 +5,18 @@
 
 import Foundation
 import SwiftUI
+import Models
 
-struct TaskView: View {
-    @Binding var tasks: [Task]
-    @State private var newTask = Task.emptyTask
+public struct TaskView: View {
+    @Binding var tasks: [Models.Task]
+    @State private var newTask = Models.Task.emptyTask
     @State private var newTaskTitle = ""
     
-    var body: some View {
+    public init(tasks: Binding<[Models.Task]>) {
+        self._tasks = tasks
+    }
+    
+    public var body: some View {
         NavigationStack {
             Form {
                 ForEach($tasks) { $task in
@@ -38,7 +43,7 @@ struct TaskView: View {
                     TextField("New Task", text: $newTaskTitle)
                     Button(action: {
                         withAnimation{
-                            let task = Task(title: newTaskTitle)
+                            let task = Models.Task(title: newTaskTitle)
                             tasks.append(task)
                             newTaskTitle = ""
                         }
@@ -50,12 +55,6 @@ struct TaskView: View {
                 }
             }
         }
-    }
-}
-
-struct TaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskView(tasks: .constant(Task.sampleData))
     }
 }
 
