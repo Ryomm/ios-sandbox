@@ -8,10 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		6F07EF8D2AB00A4A001A9C01 /* ToDoFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 6F07EF8C2AB00A4A001A9C01 /* ToDoFeature */; };
+		6F07EFAE2AB02244001A9C01 /* AppClipSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F07EFAD2AB02244001A9C01 /* AppClipSampleApp.swift */; };
+		6F07EFB02AB02244001A9C01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F07EFAF2AB02244001A9C01 /* ContentView.swift */; };
+		6F07EFB22AB02246001A9C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F07EFB12AB02246001A9C01 /* Assets.xcassets */; };
+		6F07EFB52AB02246001A9C01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F07EFB42AB02246001A9C01 /* Preview Assets.xcassets */; };
+		6F07EFBA2AB02246001A9C01 /* AppClipSample.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 6F07EFAB2AB02244001A9C01 /* AppClipSample.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6F07EFBF2AB022C4001A9C01 /* ToDoFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 6F07EFBE2AB022C4001A9C01 /* ToDoFeature */; };
 		6FBA9ABD2AAFECE6007B33F4 /* AppClipSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBA9ABC2AAFECE6007B33F4 /* AppClipSampleAppApp.swift */; };
 		6FBA9AC12AAFECE7007B33F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA9AC02AAFECE7007B33F4 /* Assets.xcassets */; };
 		6FBA9AC42AAFECE7007B33F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA9AC32AAFECE7007B33F4 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F07EFB82AB02246001A9C01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FBA9AB12AAFECE6007B33F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F07EFAA2AB02244001A9C01;
+			remoteInfo = AppClipSample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6FBA9AE92AB0042B007B33F4 /* Embed App Clips */ = {
@@ -20,6 +36,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
+				6F07EFBA2AB02246001A9C01 /* AppClipSample.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -27,6 +44,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F07EFAB2AB02244001A9C01 /* AppClipSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppClipSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F07EFAD2AB02244001A9C01 /* AppClipSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipSampleApp.swift; sourceTree = "<group>"; };
+		6F07EFAF2AB02244001A9C01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6F07EFB12AB02246001A9C01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F07EFB42AB02246001A9C01 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6F07EFB62AB02246001A9C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F07EFB72AB02246001A9C01 /* AppClipSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppClipSample.entitlements; sourceTree = "<group>"; };
 		6FBA9AB92AAFECE6007B33F4 /* AppClipSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppClipSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBA9ABC2AAFECE6007B33F4 /* AppClipSampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClipSampleAppApp.swift; sourceTree = "<group>"; };
 		6FBA9AC02AAFECE7007B33F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +58,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6F07EFA82AB02244001A9C01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F07EFBF2AB022C4001A9C01 /* ToDoFeature in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FBA9AB62AAFECE6007B33F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +84,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6F07EFAC2AB02244001A9C01 /* AppClipSample */ = {
+			isa = PBXGroup;
+			children = (
+				6F07EFAD2AB02244001A9C01 /* AppClipSampleApp.swift */,
+				6F07EFAF2AB02244001A9C01 /* ContentView.swift */,
+				6F07EFB12AB02246001A9C01 /* Assets.xcassets */,
+				6F07EFB62AB02246001A9C01 /* Info.plist */,
+				6F07EFB72AB02246001A9C01 /* AppClipSample.entitlements */,
+				6F07EFB32AB02246001A9C01 /* Preview Content */,
+			);
+			path = AppClipSample;
+			sourceTree = "<group>";
+		};
+		6F07EFB32AB02246001A9C01 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6F07EFB42AB02246001A9C01 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		6FBA9AB02AAFECE6007B33F4 = {
 			isa = PBXGroup;
 			children = (
 				6FBA9ABB2AAFECE6007B33F4 /* AppClipSampleApp */,
+				6F07EFAC2AB02244001A9C01 /* AppClipSample */,
 				6FBA9ABA2AAFECE6007B33F4 /* Products */,
 				6F07EF8B2AB00A4A001A9C01 /* Frameworks */,
 			);
@@ -65,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				6FBA9AB92AAFECE6007B33F4 /* AppClipSampleApp.app */,
+				6F07EFAB2AB02244001A9C01 /* AppClipSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +145,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6F07EFAA2AB02244001A9C01 /* AppClipSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F07EFBD2AB02246001A9C01 /* Build configuration list for PBXNativeTarget "AppClipSample" */;
+			buildPhases = (
+				6F07EFA72AB02244001A9C01 /* Sources */,
+				6F07EFA82AB02244001A9C01 /* Frameworks */,
+				6F07EFA92AB02244001A9C01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppClipSample;
+			packageProductDependencies = (
+				6F07EFBE2AB022C4001A9C01 /* ToDoFeature */,
+			);
+			productName = AppClipSample;
+			productReference = 6F07EFAB2AB02244001A9C01 /* AppClipSample.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
 		6FBA9AB82AAFECE6007B33F4 /* AppClipSampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FBA9AC72AAFECE7007B33F4 /* Build configuration list for PBXNativeTarget "AppClipSampleApp" */;
@@ -102,6 +177,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6F07EFB92AB02246001A9C01 /* PBXTargetDependency */,
 			);
 			name = AppClipSampleApp;
 			packageProductDependencies = (
@@ -121,6 +197,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					6F07EFAA2AB02244001A9C01 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					6FBA9AB82AAFECE6007B33F4 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -140,11 +219,21 @@
 			projectRoot = "";
 			targets = (
 				6FBA9AB82AAFECE6007B33F4 /* AppClipSampleApp */,
+				6F07EFAA2AB02244001A9C01 /* AppClipSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6F07EFA92AB02244001A9C01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F07EFB52AB02246001A9C01 /* Preview Assets.xcassets in Resources */,
+				6F07EFB22AB02246001A9C01 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FBA9AB72AAFECE6007B33F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +246,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6F07EFA72AB02244001A9C01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F07EFB02AB02244001A9C01 /* ContentView.swift in Sources */,
+				6F07EFAE2AB02244001A9C01 /* AppClipSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FBA9AB52AAFECE6007B33F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +265,77 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6F07EFB92AB02246001A9C01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F07EFAA2AB02244001A9C01 /* AppClipSample */;
+			targetProxy = 6F07EFB82AB02246001A9C01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		6F07EFBB2AB02246001A9C01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppClipSample/AppClipSample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AppClipSample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppClipSample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppClipSampleApp;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryomm.AppClipSampleApp.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F07EFBC2AB02246001A9C01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppClipSample/AppClipSample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AppClipSample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppClipSample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppClipSampleApp;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryomm.AppClipSampleApp.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6FBA9AC52AAFECE7007B33F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +517,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6F07EFBD2AB02246001A9C01 /* Build configuration list for PBXNativeTarget "AppClipSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F07EFBB2AB02246001A9C01 /* Debug */,
+				6F07EFBC2AB02246001A9C01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6FBA9AB42AAFECE6007B33F4 /* Build configuration list for PBXProject "AppClipSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -371,6 +548,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		6F07EF8C2AB00A4A001A9C01 /* ToDoFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ToDoFeature;
+		};
+		6F07EFBE2AB022C4001A9C01 /* ToDoFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ToDoFeature;
 		};
